@@ -40,7 +40,7 @@ queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
     kmConvert = velocidadeQueda * HORA_CONVERT;
     cout << "Velocidade da queda = " << velocidadeQueda << " m/s ou " << kmConvert << " Km/h." << endl;
 
-
+cout << "TESTE TESTE";
 
 	cout << "\n\n";
 	system("pause");
