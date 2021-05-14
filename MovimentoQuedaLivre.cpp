@@ -27,8 +27,9 @@ queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
     */
 
     float tempoQueda, g_Aceleracao, velocidadeQueda, kmConvert;
-    cout << "CALCULAR VELOCIDADE DE QUEDA LIVRE:" << endl;
-    cout << "Informe o tempo de queda em SEGUNDOS: ";
+    cout << "Queda livre é um movimento no qual os corpos que são abandonados \ncom certa altura são acelerados pela gravidade em direção ao solo. Na queda livre, \ndesconsidera-se o efeito da resistência do ar, por isso, nesse tipo de movimento, o \ntempo de queda dos objetos não depende de sua massa ou de seu tamanho, mas \nsomente da altura em que foram soltos e do módulo da aceleração da gravidade no \nlocal. \nA queda livre é um movimento uniformemente acelerado e unidimensional, \ncuja aceleração é a aceleração da gravidade.";
+    cout << "\n\nCALCULAR VELOCIDADE DE QUEDA LIVRE:" << endl;
+    cout << "\nInforme o tempo de queda em SEGUNDOS: ";
     cin >> tempoQueda;
     cout << "Informe a aceleração da GRAVIDADE em m/s: "; //Obs: formato exemplo--> 9.8
     cin >> g_Aceleracao;
