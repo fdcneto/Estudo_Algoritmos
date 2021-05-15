@@ -52,17 +52,17 @@ queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
 
     case 2:
     cout << "\n\nCALCULAR ESPAÇO PERCORRIDO E TEMPO DE QUEDA:" << endl;
-    cout << "\nInforme a VELOCIDADE da queda em SEGUNDOS: ";
+    cout << "\nInforme a VELOCIDADE da queda (m/s): ";
     cin >> velocidadeQueda;
-    cout << "Informe a aceleração da GRAVIDADE em m/s: "; //Obs: formato exemplo--> 9.8
+    cout << "Informe a aceleração da GRAVIDADE (m/s): "; //Obs: formato exemplo--> 9.8
     cin >> g_Aceleracao;
 
     cout << "\nFÓRMULA CÁLCULO: \n";
     cout << " V =  g * t \n";
-    cout << velocidadeQueda << " = " << g_Aceleracao << " * t \n" ;
+    cout << velocidadeQueda << " = " << g_Aceleracao << " * t \n\n" ;
     cout << "     " << velocidadeQueda << "\n";
     cout << "t = ------- \n";
-    cout << "     " << g_Aceleracao << "\n";
+    cout << "     " << g_Aceleracao << "\n\n";
     tempoQueda = velocidadeQueda/g_Aceleracao;
     cout << "t =  " << tempoQueda << "s \n\n";
     //-------------------------------------------------------------------------------------------------
