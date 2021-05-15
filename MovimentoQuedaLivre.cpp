@@ -13,8 +13,6 @@ int main(){
 
 	/*A aceleração da gravidade corresponde a 9,8 m/s², isto quer dizer que um corpo em
 queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
-
-
     //equações --> V = g * t
     // d = (g*t²)/2
 
@@ -26,8 +24,18 @@ queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
     d = distância percorrida pelo corpo em queda
     */
 
-    float tempoQueda, g_Aceleracao, velocidadeQueda, kmConvert;
-    cout << "Queda livre é um movimento no qual os corpos que são abandonados \ncom certa altura são acelerados pela gravidade em direção ao solo. Na queda livre, \ndesconsidera-se o efeito da resistência do ar, por isso, nesse tipo de movimento, o \ntempo de queda dos objetos não depende de sua massa ou de seu tamanho, mas \nsomente da altura em que foram soltos e do módulo da aceleração da gravidade no \nlocal. \nA queda livre é um movimento uniformemente acelerado e unidimensional, \ncuja aceleração é a aceleração da gravidade.";
+    float tempoQueda, g_Aceleracao, velocidadeQueda, kmConvert, distancia;
+    int op;
+
+    cout << "A queda livre é um movimento uniformemente acelerado e unidimensional, \ncuja aceleração é a aceleração da gravidade.\n";
+
+    cout << "\nEscolha o cálculo que deseja realizar:";
+
+    cout << "\n1: CALCULAR VELOCIDADE DE QUEDA LIVRE \n2: CALCULAR ESPAÇO PERCORRIDO E TEMPO DE QUEDA\n";
+	cin >> op;
+
+	switch (op){
+    case 1:
     cout << "\n\nCALCULAR VELOCIDADE DE QUEDA LIVRE:" << endl;
     cout << "\nInforme o tempo de queda em SEGUNDOS: ";
     cin >> tempoQueda;
@@ -40,6 +48,45 @@ queda livre aumenta sua velocidade em 9,8 m/s a cada 1 segundo. */
     velocidadeQueda = g_Aceleracao * tempoQueda;
     kmConvert = velocidadeQueda * HORA_CONVERT;
     cout << "Velocidade da queda = " << velocidadeQueda << " m/s ou " << kmConvert << " Km/h." << endl;
+    break;
+
+    case 2:
+    cout << "\n\nCALCULAR ESPAÇO PERCORRIDO E TEMPO DE QUEDA:" << endl;
+    cout << "\nInforme a VELOCIDADE da queda em SEGUNDOS: ";
+    cin >> velocidadeQueda;
+    cout << "Informe a aceleração da GRAVIDADE em m/s: "; //Obs: formato exemplo--> 9.8
+    cin >> g_Aceleracao;
+
+    cout << "\nFÓRMULA CÁLCULO: \n";
+    cout << " V =  g * t \n";
+    cout << velocidadeQueda << " = " << g_Aceleracao << " * t \n" ;
+    cout << "     " << velocidadeQueda << "\n";
+    cout << "t = ------- \n";
+    cout << "     " << g_Aceleracao << "\n";
+    tempoQueda = velocidadeQueda/g_Aceleracao;
+    cout << "t =  " << tempoQueda << "s \n\n";
+    //-------------------------------------------------------------------------------------------------
+    cout << "      " << "g * t² \n";
+    cout << "d = ------- \n";
+    cout << "      2  \n\n";
+
+    cout << "      " << g_Aceleracao << " * " << tempoQueda << "² \n";
+    cout << "d = ------- \n";
+    cout << "      2  \n\n";
+
+    cout << "      " << g_Aceleracao * (pow(tempoQueda, 2)) << "\n";
+    cout << "d = ------- \n";
+    cout << "      2  \n\n";
+    distancia = g_Aceleracao * (pow(tempoQueda, 2))/2;
+    cout << "d = "<< distancia << "m \n";
+
+        break;
+
+        default:
+        cout << "Operação inválida\n";
+        cout << "\nO programa será encerrado";
+	}
+
 
 	cout << "\n\n";
 	system("pause");
